@@ -72,12 +72,5 @@ adduser vagrant www-data
 /bin/rm -rf /home/vagrant/php.ini-recommended
 /bin/rm -rf /home/vagrant/php_5.2.17-1_amd64.deb
 
-/bin/echo ""
-/bin/echo ""
-/bin/echo "!!!!!!!!!!!!!!!!!!!!!!!!!!"
-/bin/echo "!!!!!!!!!!!!!!!!!!!!!!!!!!"
-/bin/echo "To activate php 5.2 add 'Include php52.conf' to <VirtualHost> definition for the sites which should use this version and restart apache"
-/bin/echo "To activate php 5.2 add 'Include php52.conf' to <VirtualHost> definition for the sites which should use this version and restart apache" >> /home/vagrant/activate-php52.info
-/bin/echo "!!!!!!!!!!!!!!!!!!!!!!!!!!"
-/bin/echo "!!!!!!!!!!!!!!!!!!!!!!!!!!"
+/bin/sed -i '/\/VirtualHost/i\Include php52.conf' /etc/apache2/sites-available/default
 

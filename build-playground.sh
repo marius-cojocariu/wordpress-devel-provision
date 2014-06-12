@@ -40,3 +40,4 @@ cp ../Vagrantfile ../bootstrap.sh .
 sed -i "s/8088/80$port/g" Vagrantfile
 
 vagrant up
+vagrant reload
