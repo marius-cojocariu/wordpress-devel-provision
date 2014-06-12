@@ -1,0 +1,22 @@
+{
+  "name": "wordpress-devel-provision",
+  "version": "1.0.0",
+  "description": "Simple script to fully automate different wordpress versions devel deployments",
+  "main": "installer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marius-nyxpoint/wordpress-devel-provision.git"
+  },
+  "author": "Marius Cojocariu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marius-nyxpoint/wordpress-devel-provision/issues"
+  },
+  "homepage": "https://github.com/marius-nyxpoint/wordpress-devel-provision",
+  "dependencies": {
+    "phantomjs": "^1.9.7-8"
+  }
+}

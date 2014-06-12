@@ -41,3 +41,6 @@ sed -i "s/8088/80$port/g" Vagrantfile
 
 vagrant up
 vagrant reload
+
+npm install
+./node_modules/phantomjs/bin/phantomjs installer.js

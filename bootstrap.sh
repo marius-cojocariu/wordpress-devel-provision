@@ -73,4 +73,12 @@ adduser vagrant www-data
 /bin/rm -rf /home/vagrant/php_5.2.17-1_amd64.deb
 
 /bin/sed -i '/\/VirtualHost/i\Include php52.conf' /etc/apache2/sites-available/default
+/bin/sed -i "s/put your unique phrase here/$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)/" /vagrant/wp-config-sample.php
+/bin/sed -i "s/database_name_here/wordpress/" /vagrant/wp-config-sample.php
+/bin/sed -i "s/username_here/root/" /vagrant/wp-config-sample.php
+/bin/sed -i "s/password_here/asd123/" /vagrant/wp-config-sample.php
+mv /vagrant/wp-config-sample.php /vagrant/wp-config.php
+
+
+/usr/bin/mysql -u root --password=asd123 -e "CREATE DATABASE wordpress CHARACTER SET utf8 COLLATE utf8_general_ci"
 
